@@ -1,0 +1,295 @@
+.about {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-right: 20px;
+  padding-bottom: 120px;
+  padding-left: 20px;
+
+  flex-wrap: wrap;
+
+  color: $main-blue;
+  background-color: $white;
+}
+
+.about__content {
+  width: 37.68%;
+  padding-top: 50px;
+  padding-right: 22px;
+  padding-left: 60px;
+}
+
+.about__content h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.about__subtitle {
+  margin-bottom: 39px;
+}
+
+.about__subtitle p {
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+.about__text p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.about__gallery {
+  display: flex;
+  width: 62.32%;
+
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__photo {
+  padding-left: 63px;
+}
+
+.about__photo img {
+  width: 660px;
+  height: 401px;
+}
+
+.about__video-wrapper {
+  position: relative;
+
+  width: 364px;
+  height: 228px;
+  margin-top: -117px;
+
+  background-color: transparent;
+  background-image: url("../img/video-desktop@1x.jpg");
+  background-position: 0 0;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video-desktop@2x.jpg");
+  }
+}
+
+.about__video-wrapper::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(#14367a, 0.5);
+}
+
+.about__video[poster] {
+  visibility: hidden;
+}
+
+.about__video {
+  width: 364px;
+  height: 228px;
+}
+
+.about__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+
+  background-color: transparent;
+  background-image: url("../img/play-btn.svg");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  border-radius: 50%;
+  border: none;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .about {
+    min-width: 768px;
+    padding-top: 100px;
+    padding-right: 45px;
+    padding-bottom: 100px;
+    padding-left: 45px;
+
+    flex-direction: column;
+  }
+
+  .about__content,
+  .about__gallery {
+    width: 100%;
+  }
+
+  .about__content {
+    padding-top: 0;
+    padding-right: 88px;
+    padding-left: 88px;
+
+    text-align: center;
+  }
+
+  .about__content h2 {
+    margin-bottom: 7px;
+  }
+
+  .about__subtitle {
+    margin-bottom: 34px;
+  }
+
+  .about__text {
+    margin-bottom: 44px;
+  }
+
+  .about__text p:nth-child(1n+2) {
+    display: none;
+  }
+
+  .about__gallery {
+    align-items: center;
+  }
+
+  .about__photo {
+    width: 100%;
+    max-height: 345px;
+    padding: 0;
+
+    background-image: url("../img/hall-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hall-tablet@2x.jpg");
+    }
+  }
+
+  .about__photo img {
+    width: 100%;
+    min-width: 678px;
+    height: 345px;
+
+    visibility: hidden;
+  }
+
+  .about__video-wrapper {
+    width: 266px;
+    max-height: 167px;
+    margin-top: -84px;
+
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  .about__video {
+    width: 266px;
+    height: 167px;
+  }
+
+  .about__play {
+    width: 73px;
+    height: 73px;
+    margin-top: -39px;
+    margin-left: -37px;
+
+    background-size: 73px 73px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .about {
+    min-width: 320px;
+    padding-top: 70px;
+    padding-right: 0;
+    padding-bottom: 70px;
+    padding-left: 0;
+  }
+
+  .about__content {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    text-align: left;
+  }
+
+  .about__content h2 {
+    margin-bottom: 4px;
+  }
+
+  .about__subtitle {
+    margin-bottom: 25px;
+  }
+
+  .about__text {
+    margin-bottom: 33px;
+    padding-right: 27px;
+  }
+
+  .about__photo {
+    max-height: 313px;
+
+    background-image: url("../img/hall-mobile@1x.jpg");
+    background-position: center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (min-width: 325px) {
+      background-image: url("../img/hall-mobile@2x.jpg");
+    }
+  }
+
+  .about__photo img {
+    width: 100%;
+    min-width: 320px;
+    height: 313px;
+  }
+
+  .about__video-wrapper {
+    width: 320px;
+    height: 167px;
+    margin-top: 40px;
+
+    background-image: url("../img/video-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-mobile@2x.jpg");
+    }
+  }
+
+  .about__video {
+    width: 320px;
+    height: 167px;
+  }
+}

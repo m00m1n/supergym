@@ -1,0 +1,92 @@
+.page-header {
+  padding-top: 30px;
+
+  color: $white;
+  background: radial-gradient(circle at 6% 93%, #003d85, #b80027 50%);
+  background-image: url("../img/gradient-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover, 1366px 658px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gradient-bg-desktop@2x.jpg");
+  }
+}
+
+.page-header__top {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.page-header__logo {
+  fill: $white;
+}
+
+.page-header__nav {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.page-header__link {
+  display: flex;
+  margin-left: 10px;
+
+  font-size: 26px;
+  line-height: 1em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-family: $accent-font, "Arial", sans-serif;
+
+  color: $white;
+
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .page-header {
+    padding-top: 40px;
+  }
+
+  .page-header__top {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  .page-header__link {
+    font-size: 24px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .page-header {
+    padding-top: 21px;
+  }
+
+  .page-header__top {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .page-header__link {
+    font-size: 20px;
+  }
+}

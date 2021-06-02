@@ -1,0 +1,180 @@
+.trainer-card {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  max-width: 260px;
+
+  flex-direction: column;
+
+  color: $white;
+  background-color: $grey;
+}
+
+.trainer-card h3 {
+  position: absolute;
+  bottom: 24px;
+
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  justify-content: center;
+  order: 1;
+
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+.trainer-card__photo {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.trainer-card__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+.trainer-card__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  max-width: 260px;
+  height: 100%;
+  max-height: 294px;
+
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgba($main-blue, 0.89);
+}
+
+.trainer-card__info b {
+  margin-top: 19.1%;
+
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.trainer-card__info p {
+  margin: 0;
+  margin-top: -4px;
+  margin-bottom: 33px;
+
+  font-size: 16px;
+  line-height: 1.5em;
+
+  color: $chambray;
+
+  text-align: center;
+}
+
+.trainer-card__list {
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  margin-left: 9px;
+
+  text-align: left;
+
+  list-style: none;
+}
+
+.trainer-card__item {
+  position: relative;
+
+  margin-bottom: 13px;
+  padding-left: 16px;
+
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.trainer-card__item::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.trainer-card:hover h3 {
+  display: none;
+}
+
+.trainer-card:hover .trainer-card__info {
+  display: flex;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .trainer-card {
+    width: 268px;
+  }
+
+  .trainer-card__photo {
+    width: 268px;
+    height: 294px;
+  }
+
+  .trainer-card__info {
+    width: 268px;
+    max-width: 268px;
+  }
+
+  .trainer-card__info b,
+  .trainer-card__info p,
+  .trainer-card__list {
+    margin-right: 7px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .trainer-card {
+    width: 226px;
+  }
+
+  .trainer-card__photo {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainer-card__photo img {
+    width: auto;
+    height: 274px;
+  }
+
+  .trainer-card__info {
+    width: 226px;
+    height: 274px;
+    max-height: 274px;
+  }
+
+  .trainer-card__info b {
+    margin-top: 41px;
+  }
+
+  .trainer-card__info b,
+  .trainer-card__info p {
+    margin-right: 0;
+  }
+}

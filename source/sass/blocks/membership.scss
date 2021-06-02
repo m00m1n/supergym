@@ -1,0 +1,430 @@
+.membership {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  color: $main-blue;
+  background-color: $light-grey;
+}
+
+.membership::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: -152px;
+
+  width: 287px;
+  height: 494px;
+  background-image: url("../img/disk-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/disk-desktop@2x.png");
+  }
+}
+
+.membership__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.membership h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+
+  text-align: center;
+}
+
+.membership__wrapper {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.membership__toggles {
+  position: relative;
+
+  display: flex;
+  width: 341px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 38px;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.membership__toggles-item:not(:first-child) {
+  margin-left: auto;
+}
+
+.membership__toggles::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+  background-color: rgba($grey, 0.2);
+}
+
+.membership__toggle {
+  position: relative;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 400;
+
+  color: rgba($light-blue, 0.5);
+  background-color: transparent;
+  border: none;
+
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: $border-link-color;
+
+    cursor: pointer;
+  }
+}
+
+.membership__toggle--active {
+  color: $main-blue;
+}
+
+.membership__toggle--active::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+  background-color: $border-link-color;
+}
+
+.membership__rates-wrapper {
+  width: 100%;
+}
+
+.membership__rates {
+  display: none;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.membership__rates--active {
+  display: flex;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.membership__item {
+  width: 360px;
+  min-height: 448px;
+  margin-bottom: 20px;
+  padding-top: 56px;
+  padding-right: 15px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  color: $main-blue;
+  background-color: $white;
+  border: 7px solid transparent;
+
+  overflow: hidden;
+
+  &:hover {
+    border-width: 7px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, #d10a42 0%, #00359f 100%);
+    border-image-slice: 1;
+  }
+}
+
+.membership__item h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  font-size: 26px;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+
+.membership__terms {
+  margin-bottom: 64px;
+}
+
+.membership__terms p {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 1.5em;
+
+  color: $light-blue;
+}
+
+.membership__price p {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0;
+  padding-right: 45px;
+
+  font-size: 60px;
+  line-height: 1.5em;
+  font-weight: 700;
+  word-break: break-word;
+
+  color: $bright-blue;
+}
+
+.membership__price {
+  margin-top: auto;
+  margin-bottom: 36px;
+}
+
+.membership__price p::before {
+  content: attr(data-price);
+
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 24%;
+
+  font-size: 100px;
+  line-height: 1.5em;
+  word-break: normal;
+
+  color: $medium-grey;
+
+  opacity: 0.48;
+  transform: translate(-50%, -50%);
+}
+
+.membership__price p::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+
+  width: 30px;
+  height: 42px;
+
+  background-image: url("../img/rub-icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transform: translateY(-46%);
+}
+
+
+.membership__btn {
+  width: 206px;
+  margin-top: auto;
+  padding-top: 25px;
+  padding-bottom: 27px;
+
+  color: $main-blue;
+
+  box-shadow: inset 0 0 0 2px $main-blue;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+
+    color: $white;
+    background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    box-shadow: none;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .membership {
+    padding-top: 100px;
+    padding-bottom: 59px;
+  }
+
+  .membership::after {
+    bottom: -126px;
+
+    width: 347px;
+    height: 444px;
+
+    background-image: url("../img/disk-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/disk-tablet@2x.png");
+    }
+  }
+
+  .membership__container {
+    min-width: 768px;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  .membership h2 {
+    margin-bottom: 28px;
+  }
+
+  .membership__toggles {
+    width: 48.96%;
+    margin-bottom: 44px;
+  }
+
+  .membership__toggle {
+    font-size: 18px;
+  }
+
+  .membership__rates {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership__item {
+    width: 65.19%;
+    margin-bottom: 40px;
+    padding-bottom: 60px;
+  }
+
+  .membership__btn {
+    width: 51.76%;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .membership {
+    padding-top: 70px;
+    padding-bottom: 33px;
+  }
+
+  .membership::after {
+    display: none;
+  }
+
+  .membership h2 {
+    margin-bottom: 20px;
+  }
+
+  .membership__container {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .membership__toggles {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+
+  .membership__toggle {
+    padding-bottom: 15px;
+
+    font-size: 16px;
+  }
+
+  .membership__toggle--active::after {
+    width: 113.2%;
+  }
+
+  .membership__item {
+    width: 100%;
+    max-width: 290px;
+    min-height: 384px;
+    margin-bottom: 35px;
+    padding-top: 44px;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 47px;
+  }
+
+  .membership__item h3 {
+    font-size: 22px;
+  }
+
+  .membership__terms {
+    margin-bottom: 53px;
+  }
+
+  .membership__terms p {
+    font-size: 16px;
+  }
+
+  .membership__price {
+    margin-bottom: 31px;
+  }
+
+  .membership__price p {
+    padding-right: 31px;
+
+    font-size: 48px;
+  }
+
+  .membership__price p::before {
+    font-size: 80px;
+  }
+
+  .membership__price p::after {
+    width: 24px;
+    height: 33px;
+
+    transform: translate(17%, -45%);
+  }
+
+  .membership__btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

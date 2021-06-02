@@ -1,0 +1,32 @@
+.logo {
+  display: flex;
+}
+
+.logo svg {
+  width: 89px;
+  height: 20px;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .logo {
+    width: 82px;
+    height: 19px;
+  }
+
+  .logo svg {
+    width: 82px;
+    height: 18px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .logo {
+    width: 68px;
+    height: 15px;
+  }
+
+  .logo svg {
+    width: 68px;
+    height: 15px;
+  }
+}

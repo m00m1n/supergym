@@ -1,0 +1,171 @@
+.contacts {
+  width: 50%;
+  padding-top: 70px;
+  padding-bottom: 47px;
+  padding-left: 120px;
+}
+
+.contacts h2 {
+  margin-bottom: 39px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  padding-left: 4px;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts__list {
+  width: 226px;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__list:nth-child(2n) {
+  position: relative;
+
+  padding-left: 60px;
+}
+
+.contacts__list:nth-child(2n)::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 8px;
+
+  width: 1px;
+  height: 76%;
+
+  background-color: $light-greyish;
+}
+
+.contacts__item {
+  margin-bottom: 18px;
+}
+
+
+.contacts__item dt {
+  margin-bottom: 3px;
+
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+.contacts__item dd {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 1.52em;
+  font-weight: 400;
+}
+
+.contacts__link {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+
+  color: $main-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+
+@media (max-width: $tablet-breakpoint) {
+  .contacts {
+    width: 100%;
+    padding-top: 71px;
+    padding-right: 133px;
+    padding-bottom: 43px;
+    padding-left: 133px;
+  }
+
+  .contacts h2 {
+    margin-bottom: 31px;
+  }
+
+  .contacts__wrapper {
+    padding-left: 0;
+  }
+
+  .contacts__list {
+    width: 50%;
+  }
+
+  .contacts__list:nth-child(2n) {
+    padding-left: 63px;
+  }
+
+  .contacts__list:nth-child(2n)::after {
+    top: 8px;
+    left: 15px;
+
+    height: 78%;
+  }
+
+  .contacts__item {
+    margin-bottom: 21px;
+  }
+
+  .contacts__item dt {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 700;
+  }
+
+  .contacts__item dd {
+    font-size: 18px;
+    line-height: 1.52em;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .contacts {
+    padding: 0;
+    padding-top: 71px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+  }
+
+  .contacts h2 {
+    margin-bottom: 32px;
+  }
+
+  .contacts__wrapper {
+    flex-direction: column;
+  }
+
+  .contacts__list {
+    width: 100%;
+  }
+
+  .contacts__item dt {
+    margin-bottom: 5px;
+  }
+
+  .contacts__list:nth-child(2n) {
+    padding-left: 0;
+  }
+
+  .contacts__list:nth-child(2n)::after {
+    display: none;
+  }
+}
